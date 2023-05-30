@@ -16,3 +16,5 @@ Imports:
   stringr
 Depends:
   magrittr
+URL: https://github.com/tyler-widdison/ncaavolleyballR
+BugReports: https://github.com/tyler-widdison/ncaavolleyballR/issues
