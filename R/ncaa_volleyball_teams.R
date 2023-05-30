@@ -9,7 +9,6 @@
 #'
 #' @examples
 #' try(ncaa_wvolleyball_teams())
-#' Return NCAA teams dataframe object
 #'
 #' @return ncaa_wvolleyball_teams data.frame: 'Name', 'Conference', 'ID', NOTE: Only Division 1 conferences are returned
 #'

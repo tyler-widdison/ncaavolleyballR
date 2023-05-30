@@ -6,13 +6,13 @@
 #' @author Tyler Widdison
 #' @description
 #' @importFrom stringr str_split str_split_fixed str_remove_all str_replace_all str_extract str_detect str_trim str_remove
+#' @importFrom lubridate parse_date_time
 #' @importFrom dplyr filter tibble case_when mutate if_else
 #' @importFrom rvest read_html html_table html_node html_text html_attr html_nodes
 #' @export
 #'
 #' @examples
 #' try(ncaa_wvolleyball_schedule())
-#' Return NCAA teams dataframe object
 #'
 #' @return ncaa_wvolleyball_schedule data.frame: 'url', 'date', 'home', 'away', 'location'
 #'
