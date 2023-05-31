@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ncaavolleyballR
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+**ncaavolleyballR** is an R package for acquiring NCAA volleyball data.
+
+## Installation
+
+You can install the development version of ncaavolleyballR from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("tyler-widdison/ncaavolleyballR")
+```
+
+## Example
+
+Get NCAA women's volleyball teams.
+
+```{r example, warning=FALSE}
+library(ncaavolleyballR)
+ncaavolleyballR::ncaa_wvolleyball_teams()
+```
+
+Get NCAA women's volleyball schedules.
+
+```{r TeamScheudle}
+ncaavolleyballR::ncaa_wvolleyball_schedule('Yale', 813, 2019)
+```
+
+```{r TeamConfScheudle}
+ncaavolleyballR::ncaa_wvolleyball_conf_schedule('Big Ten', 2021)
+```

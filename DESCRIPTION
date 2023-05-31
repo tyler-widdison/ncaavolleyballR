@@ -13,8 +13,7 @@ Imports:
   dplyr,
   lubridate,
   rvest,
-  stringr
-Depends:
+  stringr,
   magrittr
 URL: https://github.com/tyler-widdison/ncaavolleyballR
 BugReports: https://github.com/tyler-widdison/ncaavolleyballR/issues

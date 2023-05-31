@@ -9,6 +9,7 @@
 #' @importFrom lubridate parse_date_time
 #' @importFrom dplyr filter tibble case_when mutate if_else
 #' @importFrom rvest read_html html_table html_node html_text html_attr html_nodes
+#' @importFrom magrittr "%>%"
 #' @export
 #'
 #' @examples

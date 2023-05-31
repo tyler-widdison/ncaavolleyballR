@@ -5,6 +5,7 @@
 #' @importFrom stringr str_split str_split_fixed str_remove_all str_replace_all str_extract
 #' @importFrom dplyr filter tibble case_when mutate
 #' @importFrom rvest read_html html_table html_node html_text
+#' @importFrom magrittr "%>%"
 #' @export
 #'
 #' @examples
@@ -18,17 +19,17 @@
 #'   }
 #'
 #' @export
-ncaa_wvolleyball_teams <- function(){
+ncaa_wvolleyball_teams <- function() {
   # get all the team names and corresponding IDs from the NCAA website
 
   # Step 1: get the giant character vector that matches teams and id
   url <- "https://stats.ncaa.org/team/search"
-  all_teams_messy <- rvest::read_html(url) %>%
+  all_teams <- rvest::read_html(url) %>%
     rvest::html_node("body") %>%
     rvest::html_text()
 
   # Step 2: split the character vector
-  all_teams_matrix <- stringr::str_split(all_teams_messy, ",") %>%
+  all_teams_matrix <- stringr::str_split(all_teams, ",") %>%
     unlist() %>%
     matrix(ncol = 4, byrow = T)
 
