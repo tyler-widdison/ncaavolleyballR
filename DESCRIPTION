@@ -12,6 +12,7 @@ RoxygenNote: 7.2.3
 Imports:
   dplyr,
   lubridate,
+  tidyr,
   rvest,
   stringr,
   purrr,

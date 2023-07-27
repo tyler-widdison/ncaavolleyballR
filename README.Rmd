@@ -30,7 +30,7 @@ You can install the development version of ncaavolleyballR from [GitHub](https:/
 devtools::install_github("tyler-widdison/ncaavolleyballR")
 ```
 
-## Example
+## Example (existing functions)
 
 Get NCAA women's volleyball teams.
 

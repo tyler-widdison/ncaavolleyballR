@@ -10,6 +10,7 @@
 #' @importFrom rvest read_html html_table html_node html_text html_attr html_nodes
 #' @importFrom magrittr "%>%"
 #' @importFrom purrr map map_df
+#' @importFrom tidyr replace_na
 #' @export
 #'
 #' @examples
@@ -195,9 +196,8 @@ ncaa_wvolleyball_boxscore <- function(team, year) {
   dd <- dd[lengths(dd) > 0]
 
   box_df <- do.call(Map, c(rbind, dd))$player_stats %>%
-    left_join(do.call(Map, c(rbind, dd))$info) %>%
-    filter(Player != 'TEAM') %>%
-    select(-Attend)
+    dplyr::left_join(do.call(Map, c(rbind, dd))$info) %>%
+    dplyr::filter(Player != 'TEAM')
 
   return(box_df)
 }
