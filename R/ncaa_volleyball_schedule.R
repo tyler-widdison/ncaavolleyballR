@@ -7,7 +7,7 @@
 #' @description
 #' @importFrom stringr str_split str_split_fixed str_remove_all str_replace_all str_extract str_detect str_trim str_remove
 #' @importFrom lubridate parse_date_time
-#' @importFrom dplyr filter tibble case_when mutate if_else
+#' @importFrom dplyr filter tibble case_when mutate if_else left_join
 #' @importFrom rvest read_html html_table html_node html_text html_attr html_nodes
 #' @importFrom magrittr "%>%"
 #' @export
@@ -24,7 +24,7 @@
 #'
 #' @export
 ncaa_wvolleyball_schedule <- function(team_name, team_id, yr) {
-  # Step 1: figure out if the sport exists
+
   url <- paste0("https://stats.ncaa.org/team/", team_id)
 
   schedule_links <- rvest::read_html(url) %>%
