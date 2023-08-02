@@ -115,10 +115,12 @@ ncaa_wvolleyball_boxscore <- function(team, year) {
         Aces = NA_real_,
         SErr = NA_real_,
         Digs = NA_real_,
+        RetAtt = NA_real_,
         RErr = NA_real_,
         `Block Solos` = NA_real_,
         `Block Assists` = NA_real_,
         BErr = NA_real_,
+        TB = NA_real_,
         PTS = NA_real_,
         BHE = NA_real_,
         team = NA_character_,
@@ -130,9 +132,13 @@ ncaa_wvolleyball_boxscore <- function(team, year) {
       game_players_home <- (game_html %>% html_nodes("table:nth-child(13)") %>% html_table())[[1]]
 
       game_players_away_stats <- suppressMessages(game_players_away %>% clean_vb_box_score()) %>%
-        mutate(opponent = game_players_home[1,1])
+        mutate(opponent = game_players_home[1,1],
+               RetAtt = NA_real_,
+               TB = NA_real_)
       game_players_home_stats <- suppressMessages(game_players_home %>% clean_vb_box_score()) %>%
-        mutate(opponent = game_players_away[1,1])
+        mutate(opponent = game_players_away[1,1],
+               RetAtt = NA_real_,
+               TB = NA_real_)
     }
 
     game$info <- tibble(game_id = str_remove(box_score_url, "https://stats.ncaa.org/game/box_score/"),
@@ -168,10 +174,12 @@ ncaa_wvolleyball_boxscore <- function(team, year) {
              Aces = as.numeric(str_remove(Aces, "/")),
              SErr = as.numeric(str_remove(SErr, "/")),
              Digs = as.numeric(str_remove(Digs, "/")),
+             RetAtt = NA_real_,
              RErr = as.numeric(str_remove(RErr, "/")),
              `Block Solos` = as.numeric(str_remove(`Block Solos`, "/")),
              `Block Assists` = as.numeric(str_remove(`Block Assists`, "/")),
              BErr = as.numeric(str_remove(BErr, "/")),
+             TB = NA_real_,
              PTS = as.numeric(str_remove(PTS, "/")),
              BHE = as.numeric(str_remove(BHE, "/"))
       ) %>%
@@ -182,10 +190,12 @@ ncaa_wvolleyball_boxscore <- function(team, year) {
                       Aces = 0,
                       SErr = 0,
                       Digs = 0,
+                      RecAtt = 0,
                       RErr = 0,
                       `Block Solos` = 0,
                       `Block Assists` = 0,
                       BErr = 0,
+                      TB = 0,
                       PTS = 0,
                       BHE = 0))
 
