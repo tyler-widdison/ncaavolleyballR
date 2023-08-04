@@ -42,15 +42,21 @@ ncaavolleyballR::ncaa_wvolleyball_teams()
 Get NCAA women's volleyball schedules.
 
 ```{r TeamScheudle}
-ncaavolleyballR::ncaa_wvolleyball_schedule('Yale', 813, 2019)
+ncaavolleyballR::ncaa_wvolleyball_schedule('Yale', 813, 2017)
 ```
 
 ```{r ConfScheudle}
-ncaavolleyballR::ncaa_wvolleyball_conf_schedule('Big Ten', 2021)
+ncaavolleyballR::ncaa_wvolleyball_conf_schedule('Big Ten', 2022)
 ```
 
 Get NCAA women's box score, single team for entire season.
 
 ```{r TeamBoxScore}
-ncaavolleyballR::ncaa_wvolleyball_boxscore('BYU', 2017)
+ncaavolleyballR::ncaa_wvolleyball_boxscore('BYU', 2015)
+```
+
+Get NCAA women's play by play, single team for entire season.
+
+```{r}
+ncaavolleyballR::ncaa_wvolleyball_pbp('BYU', 2021)
 ```
