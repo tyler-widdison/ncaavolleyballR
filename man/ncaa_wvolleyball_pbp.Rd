@@ -15,13 +15,13 @@ ncaa_wvolleyball_pbp(team, year)
 ncaa_wvolleyball_pbp data.frame: 'set_number', 'skill', 'team', 'player_name', 'away_score', 'home_score', 'serving_team', 'away_team', 'home_team', 'opponent', 'point_won_by', 'ncaa_match_id', 'point_id', 'id', 'location', 'box_score', 'play_by_play'
 }
 \description{
-Return a play by play dataframe
+Get NCAA volleyball team play by play from a season
 }
 \examples{
 try(ncaa_wvolleyball_pbp())
 
 \dontrun{
-  ncaa_wvolleyball_pbp('Yale', 2019)
+  ncaa_wvolleyball_pbp('Akron', 2019)
   }
 
 }

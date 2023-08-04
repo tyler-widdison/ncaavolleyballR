@@ -20,7 +20,7 @@
 #'
 #' @examples
 #' \dontrun{
-#'   ncaa_wvolleyball_pbp('Yale', 2019)
+#'   ncaa_wvolleyball_pbp('Akron', 2019)
 #'   }
 #'
 #' @export
