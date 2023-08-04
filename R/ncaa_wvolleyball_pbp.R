@@ -3,7 +3,7 @@
 #' @param team_name team name, found in [ncaa_wvolleyball_teams()]
 #' @param yr year YYYY format
 #' @author Tyler Widdison
-#' @description Return a play by play dataframe
+#' @description
 #' @importFrom stringr str_split str_split_fixed str_remove_all str_replace_all str_extract str_detect str_trim str_remove str_squish str_to_title
 #' @importFrom lubridate parse_date_time
 #' @importFrom dplyr filter tibble case_when mutate if_else bind_rows select inner_join lag group_by ungroup rename first
