@@ -1,4 +1,5 @@
-
+# Deprecated
+Head over to https://github.com/JeffreyRStevens/ncaavolleyballr
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # ncaavolleyballR
